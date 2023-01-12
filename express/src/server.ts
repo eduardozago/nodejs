@@ -1,9 +1,16 @@
-import express, {Request, Response} from 'express';
+import express, { Request, Response } from 'express';
+import path from 'path';
+import routes from './routes';
 
 const server = express();
 
-server.get('/', (req: Request, res:Response) => {
-    res.send('Hello world');
+server.use(express.static(path.join(__dirname, '../public')));
+
+server.use(routes);
+// server.use('/', routes);
+
+server.use((req: Request, res: Response) => {
+    res.status(404).send('Page not found');
 });
 
 server.listen(3000);
