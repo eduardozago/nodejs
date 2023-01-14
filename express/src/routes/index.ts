@@ -2,8 +2,11 @@ import { Router, Request, Response } from "express";
 
 const router = Router();
 
-router.get('/', (req: Request, res:Response) => {    
-    res.send('Hello World');
+router.get('/', (req: Request, res:Response) => { 
+    let user: string = 'John';   
+    res.render('home', {
+        user: user
+    });
 });
 
 router.get('/user/:id', (req: Request, res:Response) => {
