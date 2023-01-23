@@ -1,0 +1,14 @@
+{{>partials/header}}
+
+    Hello, {{ user }}
+
+    <hr>
+
+    <h3>Products</h3>
+    <ul>
+    {{#products}}
+        <li>{{title}} - $ {{price}}</li>
+    {{/products}}
+    </ul>
+
+{{>partials/footer}}
