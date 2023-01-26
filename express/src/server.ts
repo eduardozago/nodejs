@@ -12,6 +12,9 @@ server.engine('mustache', mustache());
 
 server.use(express.static(path.join(__dirname, '../public')));
 
+// Enables getting data in the request body
+server.use(express.urlencoded({ extended: true }));
+
 server.use(routes);
 // server.use('/', routes);
 

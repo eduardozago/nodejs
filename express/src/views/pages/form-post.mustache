@@ -1,0 +1,23 @@
+{{>partials/header}}
+
+
+<h3>Form post</h3>
+<form method="POST">
+
+    <input type="text" name="name" placeholder="Your name"><br><br>
+    <input type="text" name="age" placeholder="Your age"><br><br>
+    <input type="submit" value="submit"><br>
+
+</form>
+
+<hr>
+
+{{#name}}
+    Name: {{name}}
+{{/name}}
+<br>
+{{#age}}
+    Age: {{age}}
+{{/age}}
+
+{{>partials/footer}}
