@@ -1,6 +1,6 @@
-# Express - Node.js
+# MVC - Node.js
 
-Express.js project
+Beginning of MVC studies with Node.Js
 
 ### Usage
 
